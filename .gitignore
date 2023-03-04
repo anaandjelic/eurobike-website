@@ -2,12 +2,15 @@
 /dist  
 /tmp  
 /out-tsc  
+/bazel-out
   
 # dependencies  
 /node_modules  
+npm-debug.log
+yarn-error.log
   
 # IDEs and editors  
-/.idea  
+.idea/
 .project  
 .classpath  
 .c9/  
@@ -21,20 +24,17 @@
 !.vscode/tasks.json  
 !.vscode/launch.json  
 !.vscode/extensions.json  
+.history/*
   
 # misc  
+/.angular/cache
 /.sass-cache  
 /connect.lock  
 /coverage  
 /libpeerconnection.log  
-npm-debug.log  
-yarn-error.log  
 testem.log  
 /typings  
   
 # System Files  
 .DS_Store  
 Thumbs.db 
-
-# VSCode
-.vscode
