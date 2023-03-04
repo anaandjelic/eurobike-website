@@ -1,0 +1,129 @@
+<div class="flex relative text-white">
+  <img src="../../../assets/images/landing-img.png" alt="" class="w-full h-[100vh] object-cover z-0">
+  <div class="absolute w-full h-[100vh] z-10 pt-[70px] sm:px-10 text-center flex flex-col md:flex-row justify-center">
+    <img src="../../../assets/images/logo/logo.svg" alt="" class="w-[70vw] sm:w-[50vw] md:w-[35vw] home-logo mx-auto md:mx-5 my-5">
+    <div class="md:my-auto">
+      <h1 class="md:text-right text-4xl md:text-6xl xl:text-7xl m-5">Prodaja i servis bicikala u Somboru sa iskustvom 20 godina</h1>
+    </div>
+    <!--
+    <div class="flex gap-10 justify-center">
+      <button>Cenovnik</button>
+      <button>Kontakt</button>
+    </div>
+    -->
+  </div>
+  <div class="absolute bottom-16 right-10 z-50">
+    <div class="arrow">
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+<!--
+  <div class="w-1/3 flex justify-center">
+    <img src="../../../assets/images/logo/logo.svg" alt="" class="h-32 sm:h-40 md:h-72 my-auto">
+  </div>
+  <div class="w-2/3 relative">
+    <div class="absolute top-0 w-full bg-gradient-to-r from-white via-transparent h-52 sm:h-60 md:h-96 z-10"></div>
+    <img src="../../../assets/images/IMG_20230221_160644.jpg" alt="" class="w-full h-52 sm:h-60 md:h-96 object-cover z-20">
+  </div>
+
+
+  
+    <div class="w-full absolute top-0 left-0 bg-white h-52 sm:h-60 md:h-96"></div>
+    <div class="w-full absolute top-0 left-0 bg-gradient-to-r from-white via-transparent h-52 sm:h-60 md:h-96"></div>
+  -->
+</div>
+
+<section class="px-10 py-16 text-sm sm:text-base flex flex-col-reverse sm:flex-row to-right">
+  <div class="w-full sm:w-2/3 my-auto text-right px-10">
+    <h2>Prodaja</h2>
+    <p class="indent-0 pr-0 text-right text-xl">
+      Kod nas možete kupiti bicikl sa 10% popusta za keš kao i putem administrativne zabrane i čekova, a može i karticom.<br/>
+      Prilikom kupovine nulti servis je obavezan i besplatan.<br/>
+      Ako niste sigurni koji bajk Vam najviše odgovara za vaše aktivnosti tu smo da pomognemo.
+    </p>
+  </div>
+  <div class="w-full sm:w-1/3">
+    <img src="../../../assets/images/home-img-1.jpg" alt="" class="w-full sm:w-[50vw]"/>
+  </div>
+</section>
+
+<section class="px-10 py-16 text-sm sm:text-base flex flex-col md:flex-row to-left">
+  <div class="w-full md:w-1/3">
+    <img src="../../../assets/images/home-img-2.jpg" alt="" class="w-full md:w-[50vw]"/>
+  </div>
+  <div class="w-full md:w-2/3 my-auto px-10">
+    <h2>Ponuda</h2>
+    <p class="indent-0 pl-0 text-xl">
+      Imamo bicikle za sve uzraste i stilove voznje bilo dečiji, rekreativni i profesionalni.<br/>
+      Brendovi sa kojima sarađujemo su:<br/>
+      Visitor                Explorer<br/>
+      Venssini            Galaxy dečiji program<br/>
+      Raspolažemo sa svim rezervnim delovima kao i dodacima uključujući brave za zaključavanje, korpe, dečija sedišta i ostalo.
+    </p>
+  </div>
+</section>
+
+<section class="px-10 py-16 text-sm sm:text-base flex flex-col-reverse md:flex-row to-right">
+  <div class="w-full md:w-2/3 my-auto text-right px-10">
+    <h2>Servis i održavanje</h2>
+    <p class="indent-0 pr-0 text-right text-xl">
+      Ovlašćeni smo servis za sve dvotočkaše koje prodajemo a delove koristimo od proverenih proizvođača.<br/>
+      Shvatamo koliko je bitno da brzo i pouzdano rešite sve probleme zato smo fokusirani na organizaciju kako bi pružili što efikasnije rešenje.<br/>
+      Kod nas uvek možete dobiti savet za korišćenje i održavanje bicikla.
+    </p>
+  </div>
+  <div class="w-full md:w-1/3 flex justify-end">
+    <img src="../../../assets/images/home-img-3.png" alt="" class="w-full md:h-96"/>
+  </div>
+</section>
+
+<section class="py-16 to-up">
+
+  <h2 class="text-center">Mi smo EuroBike</h2>
+  <div class="w-11/12 sm:w-4/6 lg:w-4/6 mx-auto flex flex-wrap text-xl text-justify indent-[4ch]">
+    <p class="w-full mb-[1ch]">
+      Zaljubili smo se u biciklizam pre 20. Godina, nakon čega smo se odlučili da se maksimalno posvetimo ovom poslu. Posle nekoliko godina učenja i usavršavanja otvorili smo prodavnicu i servis Eurobike.
+    </p>
+    <p class="w-full mb-[1ch]">
+      Našoj posvećenosti na kvalitetu i ozbiljnosti u radu stvorili smo mali porodičan biznis, kao takav naš cilj je da izgradimo prijateljsku i toplu atmosferu za naše kupce te da se osećaju kao deo naše porodice.
+    </p>
+  </div>
+
+</section>
+
+<section class="text-center py-16">
+  <ngx-slick-carousel class="carousel" 
+                        #slickModal="slick-carousel" 
+                        [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+              <img src="{{ slide.img }}" alt="">
+        </div>
+    </ngx-slick-carousel>
+</section>
+
+<section class="w-full bg-[#301010] text-white p-10 flex flex-col sm:flex-row gap-10 sm:gap-0">
+  <div class="w-full md:w-1/3 text-center">
+    <h3>Radno vreme</h3>
+    <p class="font-semibold">Radnim danima</p>
+    <p>08:00 - 16:00</p>
+    <p class="font-semibold">Subotom</p>
+    <p>08:00 - 12:00</p>
+    <p class="font-semibold">Nedeljom</p>
+    <p>/</p>
+  </div>
+  <div class="w-full md:w-1/3 text-center">
+    <h3>Kontakt</h3>
+    <p>025 / 412 - 151</p>
+    <p>eurobike2@gmail.com</p>
+    <p class="mt-2 text-4xl"><i class="pi pi-instagram mr-4"></i> <i class="pi pi-facebook"></i></p>
+  </div>
+  <div class="w-full md:w-1/3 text-center">
+    <h3>Adresa</h3>
+    <p>Staparski put 46</p>
+    <p>Sombor</p>
+    <p>25000</p>
+    <p>Srbija</p>
+  </div>
+  
+</section>

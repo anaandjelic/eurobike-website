@@ -1,0 +1,42 @@
+.arrow {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.arrow span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 5px solid var(--darkt);
+  border-right: 5px solid var(--darkt);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.dark .arrow span {
+  border-bottom: 5px solid var(--darkt);
+  border-right: 5px solid var(--darkt);
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+      opacity: 0;
+      transform: rotate(45deg) translate(-15px, -15px);
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      transform: rotate(45deg) translate(15px, 15px);
+  }
+}

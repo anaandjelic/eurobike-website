@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '~primeicons/primeicons.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+* {
+	-ms-overflow-style: none;  /* Internet Explorer 10+ */
+	scrollbar-width: none;  /* Firefox */
+}
+*::-webkit-scrollbar { 
+	display: none;  /* Safari and Chrome */
+}
+
+:root {
+	--darkbg: #130e0d;
+	--darkbgnav: #130e0dbb;
+	--darkt: #fff;
+	--darktnav: #262626;
+	--lightbg: #171C26;
+	--lightbgnav: #283554bb;
+	--lightty: #f7e64c;
+	--lightt: #ffffff;
+
+	--toggleHeight: 6em;
+	--toggleWidth: 10em;
+	--toggleBtnRadius: 4em;
+
+	--bgColor--night: #423966;
+	--toggleBtn-bgColor--night: var(--bgColor--night);
+	--mooncolor: #D9FBFF;
+	--bgColor--day: #9ee3fb;
+	--toggleBtn-bgColor--day: var(--bgColor--day);
+}
+
+body {
+	transition: all .5s ease-in-out;
+	background: var(--lightbg);
+	color: var(--lightt);
+
+	font-family: 'Dosis', sans-serif;
+}
+
+body.dark {
+	background: var(--darkbg);
+	color: var(--darkt);
+}
