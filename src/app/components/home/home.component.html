@@ -5,12 +5,6 @@
     <div class="md:my-auto">
       <h1 class="md:text-right text-4xl md:text-6xl xl:text-7xl m-5">Prodaja i servis bicikala u Somboru sa iskustvom 20 godina</h1>
     </div>
-    <!--
-    <div class="flex gap-10 justify-center">
-      <button>Cenovnik</button>
-      <button>Kontakt</button>
-    </div>
-    -->
   </div>
   <div class="absolute bottom-16 right-10 z-50">
     <div class="arrow">
@@ -18,20 +12,6 @@
       <span></span>
     </div>
   </div>
-<!--
-  <div class="w-1/3 flex justify-center">
-    <img src="../../../assets/images/logo/logo.svg" alt="" class="h-32 sm:h-40 md:h-72 my-auto">
-  </div>
-  <div class="w-2/3 relative">
-    <div class="absolute top-0 w-full bg-gradient-to-r from-white via-transparent h-52 sm:h-60 md:h-96 z-10"></div>
-    <img src="../../../assets/images/IMG_20230221_160644.jpg" alt="" class="w-full h-52 sm:h-60 md:h-96 object-cover z-20">
-  </div>
-
-
-  
-    <div class="w-full absolute top-0 left-0 bg-white h-52 sm:h-60 md:h-96"></div>
-    <div class="w-full absolute top-0 left-0 bg-gradient-to-r from-white via-transparent h-52 sm:h-60 md:h-96"></div>
-  -->
 </div>
 
 <section class="px-10 py-16 text-sm sm:text-base flex flex-col-reverse sm:flex-row to-right">
@@ -102,28 +82,34 @@
     </ngx-slick-carousel>
 </section>
 
-<section class="w-full bg-[#301010] text-white p-10 flex flex-col sm:flex-row gap-10 sm:gap-0">
-  <div class="w-full md:w-1/3 text-center">
     <h3>Radno vreme</h3>
     <p class="font-semibold">Radnim danima</p>
+<section class="w-full bg-[#301010] text-white p-10 flex flex-row flex-wrap gap-y-10 md:gap-0">
+  <div class="w-1/2 sm:w-1/3 md:w-1/4 text-center">
     <p>08:00 - 16:00</p>
     <p class="font-semibold">Subotom</p>
     <p>08:00 - 12:00</p>
     <p class="font-semibold">Nedeljom</p>
     <p>/</p>
   </div>
-  <div class="w-full md:w-1/3 text-center">
     <h3>Kontakt</h3>
+  <div class="w-1/2 sm:w-1/3 md:w-1/4 text-center">
     <p>025 / 412 - 151</p>
     <p>eurobike2@gmail.com</p>
     <p class="mt-2 text-4xl"><i class="pi pi-instagram mr-4"></i> <i class="pi pi-facebook"></i></p>
   </div>
-  <div class="w-full md:w-1/3 text-center">
     <h3>Adresa</h3>
+  <div class="w-full sm:w-1/3 md:w-1/4 text-center hidden sm:block">
     <p>Staparski put 46</p>
     <p>Sombor</p>
     <p>25000</p>
     <p>Srbija</p>
+  </div>
+  <div class="w-full sm:w-1/3 md:w-1/4 text-center block sm:hidden">
+    <p>Staparski put 46, Sombor, 25000, Srbija</p>
+  </div>
+  <div class="w-full md:w-1/4 text-center">
+    <app-map></app-map>
   </div>
   
 </section>

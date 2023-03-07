@@ -25,7 +25,8 @@ h3 {
 }
 
 .home-logo {
-    filter: invert(1) sepia(13%) saturate(20000%) hue-rotate(0deg) brightness(93%) contrast(87%);
+    /*filter: invert(1) sepia(13%) saturate(20000%) hue-rotate(0deg) brightness(93%) contrast(87%);*/
+    filter: invert(1);
     transition: filter .3s ease-in-out;
 }
 

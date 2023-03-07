@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { MapComponent } from './components/map/map.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SlickCarouselModule,
+    LeafletModule,
   ],
   bootstrap: [AppComponent]
 })
