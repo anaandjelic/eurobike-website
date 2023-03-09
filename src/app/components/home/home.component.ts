@@ -9,13 +9,13 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class HomeComponent {
   slides = [
-    {img: "../../../assets/images/home-carousel/1.jpg"},
-    {img: "../../../assets/images/home-carousel/2.jpg"},
-    {img: "../../../assets/images/home-carousel/3.jpg"},
-    {img: "../../../assets/images/home-carousel/4.jpg"},
-    {img: "../../../assets/images/home-carousel/5.jpg"},
-    {img: "../../../assets/images/home-carousel/6.jpg"},
-    {img: "../../../assets/images/home-carousel/7.jpg"}
+    {img: "assets/images/home-carousel/1.jpg"},
+    {img: "assets/images/home-carousel/2.jpg"},
+    {img: "assets/images/home-carousel/3.jpg"},
+    {img: "assets/images/home-carousel/4.jpg"},
+    {img: "assets/images/home-carousel/5.jpg"},
+    {img: "assets/images/home-carousel/6.jpg"},
+    {img: "assets/images/home-carousel/7.jpg"}
   ];
   slideConfig = {
     "centerMode": true,
