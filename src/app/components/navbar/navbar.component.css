@@ -48,7 +48,6 @@ a {
 }
 
 .nav-branding {
-	font-size: 2rem;
 	display: flex;
 	column-gap: 10px;
 }
