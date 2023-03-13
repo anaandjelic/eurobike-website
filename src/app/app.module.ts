@@ -12,6 +12,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LanguageToggleComponent } from './components/language-toggle/language-toggle.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { MapComponent } from './components/map/map.component';
+import { WorkHoursComponent } from './components/work-hours/work-hours.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -23,7 +24,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomeComponent,
     NavbarComponent,
     LanguageToggleComponent,
-    MapComponent
+    MapComponent,
+    WorkHoursComponent
   ],
   imports: [
     BrowserModule,
