@@ -3,9 +3,6 @@
 	height: 50px;
 	object-fit: contain;
 	transition: all .3s ease-in-out;
-	filter: invert(1);
-}
-.dark .navbar-logo {
 }
 
 li {

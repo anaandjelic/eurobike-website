@@ -24,14 +24,6 @@ h3 {
     background-color: var(--darkbg);
 }
 
-.home-logo {
-    /*filter: invert(1) sepia(13%) saturate(20000%) hue-rotate(0deg) brightness(93%) contrast(87%);*/
-    filter: invert(1);
-    transition: filter .3s ease-in-out;
-}
-
-.dark .home-logo {}
-
 button {
     background: transparent;
     border: 1px solid #262626;
