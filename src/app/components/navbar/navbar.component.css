@@ -20,12 +20,12 @@ a {
 
 .navbar {
 	position: fixed;
-	width: 100%;
+	width: 100vw;
 	z-index: 20;
 	top: 0;
 	transition: all .3s ease-in-out;
 	transition: top .2s;
-	background-color: var(--darkbgnav);
+	background-color: var(--lightbgnav);
 	min-height: 70px;
 	display: flex;
 	justify-content: space-between;
@@ -41,7 +41,7 @@ a {
 	justify-content: space-between;
 	align-items: center;
 	gap: 30px;
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 }
 
 .nav-branding {
@@ -106,7 +106,7 @@ a {
 		top: 70px;
 		left: 0;
 		gap: 0;
-		width: 100%;
+		width: 100vw;
 		height: calc(100vh - 70px);
 		background-color: #26262600;
 		color: transparent;
