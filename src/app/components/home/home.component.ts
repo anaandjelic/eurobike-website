@@ -9,13 +9,13 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class HomeComponent {
   slides = [
-    {img: "assets/images/home-carousel/1.jpg"},
-    {img: "assets/images/home-carousel/2.jpg"},
-    {img: "assets/images/home-carousel/3.jpg"},
-    {img: "assets/images/home-carousel/4.jpg"},
-    {img: "assets/images/home-carousel/5.jpg"},
-    {img: "assets/images/home-carousel/6.jpg"},
-    {img: "assets/images/home-carousel/7.jpg"}
+    { img: "assets/images/home-carousel/1.jpg" },
+    { img: "assets/images/home-carousel/2.jpg" },
+    { img: "assets/images/home-carousel/3.jpg" },
+    { img: "assets/images/home-carousel/4.jpg" },
+    { img: "assets/images/home-carousel/5.jpg" },
+    { img: "assets/images/home-carousel/6.jpg" },
+    { img: "assets/images/home-carousel/7.jpg" }
   ];
   slideConfig = {
     "centerMode": true,
@@ -47,45 +47,45 @@ export class HomeComponent {
     ]
   };
 
-  constructor 
-  (
-    private meta: Meta,
-    private title: Title
-  ) {
+  constructor
+    (
+      private meta: Meta,
+      private title: Title
+    ) {
     this.meta.addTags([
-      {name: 'description', content:''}
+      { name: 'description', content: '' }
     ]);
   }
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: any) {
     let elements = document.getElementsByTagName('section');
-    Array.from(elements).forEach( function(element) {
-      
-      if( isElementXPercentInViewport(element, 50) ){
+    Array.from(elements).forEach(function (element) {
+
+      if (isElementXPercentInViewport(element, 30)) {
         if (!element.classList.contains('inview')) {
           element.classList.add('inview');
-        } 
+        }
       }
-      
-    }); 
+
+    });
   }
 }
 
-  
-  const isElementXPercentInViewport = function(el:any, percentVisible:any) {
-    let
-      top = el.getBoundingClientRect().top,
-      bottom = el.getBoundingClientRect().bottom,
-      height = el.getBoundingClientRect().height,
-      windowHeight = (window.innerHeight || document.documentElement.clientHeight);
 
-    if (el.classList.contains('to-up')) {
-      bottom -= 50;
-    }
-  
-    return !(
-      Math.floor(100 - (((top >= 0 ? 0 : top) / +-height) * 100)) < percentVisible ||
-      Math.floor(100 - ((bottom - windowHeight) / height) * 100) < percentVisible
-    )
-  };
+const isElementXPercentInViewport = function (el: any, percentVisible: any) {
+  let
+    top = el.getBoundingClientRect().top,
+    bottom = el.getBoundingClientRect().bottom,
+    height = el.getBoundingClientRect().height,
+    windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+
+  if (el.classList.contains('to-up')) {
+    bottom -= 50;
+  }
+
+  return !(
+    Math.floor(100 - (((top >= 0 ? 0 : top) / +-height) * 100)) < percentVisible ||
+    Math.floor(100 - ((bottom - windowHeight) / height) * 100) < percentVisible
+  )
+};

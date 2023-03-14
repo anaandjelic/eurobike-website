@@ -33,7 +33,10 @@ export class NavbarComponent {
       if (this.prevScrollpos > currentScrollPos) {
         document.getElementById("navbar")!.style.top = "0";
       } else {
-        document.getElementById("navbar")!.style.top = "-70px";
+        const element = document.getElementsByClassName("nav-menu")[0];
+        if (!element?.classList.contains("active")) {
+          document.getElementById("navbar")!.style.top = "-70px";
+        }
       }
       this.prevScrollpos = currentScrollPos;
   }
