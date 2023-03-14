@@ -6,7 +6,7 @@
   "section-content-1-3": "If you are not sure what kind of bike suits you, we are always happy to help and give advice.",
   "section-title-2": "What we offer",
   "section-content-2-1": "In our store we have bicycles for every age and style of cycling, either recreational or professional.",
-  "section-content-2-2": "Brands that we work with are: Visitor, Explorer, Venssini Galaxy for kids etc.",
+  "section-content-2-2": "Brands that we work with are: Visitor, Explorer, Venssini, Galaxy.",
   "section-content-2-3": "In our store, you can find spare parts and equipment such as locks, child seats, baskets, tires, etc.",
   "section-title-3": "Service and maintenance",
   "section-content-3-1": "For every bike we are selling, we are warranted service, and the parts we use are from renowned manufactureres.",
@@ -18,9 +18,12 @@
   "introduction-content-2": "Our commitment to quality and thoughtfulness created this small business, and our goal is to create friendly and warm atmosphere, so that our customers feel like part of the family.",
 
   "working-hours": "Working hours",
+  "summer-working-hours": "Summer working hours",
+  "winter-working-hours": "Winter working hours",
   "working-days": "Monday - Friday",
   "saturday": "Saturday",
   "sunday": "Sunday",
+  "closed": "closed",
 
   "contant": "Contact",
 
