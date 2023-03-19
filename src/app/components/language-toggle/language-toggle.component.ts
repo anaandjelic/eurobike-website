@@ -17,12 +17,13 @@ export class LanguageToggleComponent implements OnInit {
   ngOnInit(): void {
     this.lang = localStorage.getItem('lang') || 'sr';
     if (this.lang === 'en') {
-      (document.getElementById('toggle') as HTMLInputElement).checked = true;
+      (document.getElementById('toggle') as HTMLInputElement).classList.toggle('checked');
       this.translateService.use('en');
     }
   }
 
   toggle() {
+    (document.getElementById('toggle') as HTMLInputElement).classList.toggle('checked');
     if (this.lang === 'sr') {
       this.lang = 'en';
     }
