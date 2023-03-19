@@ -5,14 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LanguageToggleComponent } from './components/language-toggle/language-toggle.component';
-import { LeafletModule } from '@asymmetrik/ngx-leaflet';
-import { MapComponent } from './components/map/map.component';
+import { LeafletMapComponent } from './components/map/map.component';
 import { WorkHoursComponent } from './components/work-hours/work-hours.component';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { NgLeafletUniversalModule } from 'ng-leaflet-universal';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -24,15 +24,15 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomeComponent,
     NavbarComponent,
     LanguageToggleComponent,
-    MapComponent,
+    LeafletMapComponent,
     WorkHoursComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     SlickCarouselModule,
     HttpClientModule,
-    LeafletModule,
+    NgLeafletUniversalModule,
     TranslateModule.forRoot({
       defaultLanguage: 'sr',
       loader: {

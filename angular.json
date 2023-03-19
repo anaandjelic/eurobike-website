@@ -27,9 +27,9 @@
             ],
             "styles": [
               "src/styles.css",
+              "./node_modules/leaflet/dist/leaflet.css",
               "node_modules/slick-carousel/slick/slick.scss",
-              "node_modules/slick-carousel/slick/slick-theme.scss",
-              "./node_modules/leaflet/dist/leaflet.css"
+              "node_modules/slick-carousel/slick/slick-theme.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -96,15 +96,68 @@
             ],
             "styles": [
               "src/styles.css",
+              "./node_modules/leaflet/dist/leaflet.css",
               "node_modules/slick-carousel/slick/slick.scss",
-              "node_modules/slick-carousel/slick/slick-theme.scss",
-              "./node_modules/leaflet/dist/leaflet.css"
+              "node_modules/slick-carousel/slick/slick-theme.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/slick-carousel/slick/slick.min.js"
             ]
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "docs",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media"
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "eurobike-website:build:development",
+              "serverTarget": "eurobike-website:server:development"
+            },
+            "production": {
+              "browserTarget": "eurobike-website:build:production",
+              "serverTarget": "eurobike-website:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "eurobike-website:build:production",
+              "serverTarget": "eurobike-website:server:production"
+            },
+            "development": {
+              "browserTarget": "eurobike-website:build:development",
+              "serverTarget": "eurobike-website:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
