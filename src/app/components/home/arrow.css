@@ -1,22 +1,21 @@
 .arrow {
   position: absolute;
   transform: translate(-50%, -50%);
-  cursor: pointer;
 }
 
 .arrow span {
   display: block;
   width: 20px;
   height: 20px;
-  border-bottom: 5px solid var(--darkt);
-  border-right: 5px solid var(--darkt);
+  border-bottom: 5px solid white;
+  border-right: 5px solid white;
   margin: -10px;
   animation: animate 2s infinite;
 }
 
 .dark .arrow span {
-  border-bottom: 5px solid var(--darkt);
-  border-right: 5px solid var(--darkt);
+  border-bottom: 5px solid white;
+  border-right: 5px solid white;
 }
 
 .arrow span:nth-child(2) {
