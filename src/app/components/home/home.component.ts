@@ -1,4 +1,4 @@
-import { Component, HostListener, ViewEncapsulation } from '@angular/core';
+import { Component, HostListener, OnInit, ViewEncapsulation } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
@@ -7,7 +7,7 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrls: ['./home.component.css', './arrow.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   slides = [
     { img: "assets/images/home-carousel/1.jpg" },
     { img: "assets/images/home-carousel/2.jpg" },
@@ -51,10 +51,11 @@ export class HomeComponent {
     (
       private meta: Meta,
       private title: Title
-    ) {
-    this.meta.addTags([
-      { name: 'description', content: '' }
-    ]);
+    ) {}
+
+  ngOnInit(): void {
+    this.title.setTitle('EuroBike - Prodavnica i servis za bicikle');
+    this.meta.updateTag({ name: 'description', content: 'EuroBike - prodavnica i servis za bicikle nudi široku ponudu bicikala, rezervnih delova za bicikle, kao i pouzdane i brze popravke.'})
   }
 
   @HostListener('window:scroll', ['$event'])
