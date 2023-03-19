@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
-import { tileLayer, latLng, marker, icon } from 'leaflet';
+import { Component, ViewChild } from '@angular/core';
+import { MapComponent } from 'ng-leaflet-universal';
+import { Marker } from 'ng-leaflet-universal/lib/models/marker.interface';
 
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css']
 })
-export class MapComponent {
+export class LeafletMapComponent {
 
-  lat = 45.766890;
-  lng = 19.119820;
+  lat: number = 45.766890;
+  lng: number = 19.119820;
+  /*
   customIcon = icon({
     iconUrl: 'assets/images/marker-icon-2x.png',
     iconSize: [20, 32],
@@ -28,5 +30,24 @@ export class MapComponent {
     minZoom: 12,
     center: latLng(this.lat, this.lng)
   };
-
+  */
+  @ViewChild(MapComponent) mapComponent: MapComponent;
+  markers: Marker[];
+  
+  constructor() {
+    this.markers = [
+      {
+        id: "EuroBike",
+        icon: 'assets/images/logo/logo-w.svg',
+        location: {
+          latitude: this.lat,
+          longitude: this.lng,
+        }
+      }
+    ];
+  }
+  
+  ngAfterViewInit(): void {
+    this.mapComponent.updateMarkers(this.markers);
+  }
 }

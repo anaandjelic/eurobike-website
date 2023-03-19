@@ -1,4 +1,5 @@
-import { Component, HostListener, ViewEncapsulation } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, HostListener, Inject, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,8 +8,11 @@ import { Component, HostListener, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class NavbarComponent {
+  
   isLight: boolean = true;
   prevScrollpos = 0;
+
+  constructor(@Inject(DOCUMENT) private document: Document) {}
 
   ngAfterViewInit() {
     const hamburger = document.querySelector(".hamburger");
