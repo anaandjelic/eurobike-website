@@ -15,15 +15,15 @@ export class NavbarComponent {
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
   ngAfterViewInit() {
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
+    const hamburger = this.document.querySelector(".hamburger");
+    const navMenu = this.document.querySelector(".nav-menu");
 
     hamburger?.addEventListener("click", () => {
       hamburger.classList.toggle("active");
       navMenu?.classList.toggle("active");
     });
 
-    document.querySelectorAll(".nav-link").forEach(n => 
+    this.document.querySelectorAll(".nav-link").forEach(n => 
       n.addEventListener("click", () => {
         hamburger?.classList.remove("active");
         navMenu?.classList.remove("active");
@@ -35,21 +35,21 @@ export class NavbarComponent {
   onScroll(event: any) {
       var currentScrollPos = window.pageYOffset;
       if (this.prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar")!.style.top = "0";
+        this.document.getElementById("navbar")!.style.top = "0";
       } else {
-        const element = document.getElementsByClassName("nav-menu")[0];
+        const element = this.document.getElementsByClassName("nav-menu")[0];
         if (!element?.classList.contains("active")) {
-          document.getElementById("navbar")!.style.top = "-70px";
+          this.document.getElementById("navbar")!.style.top = "-70px";
         }
       }
       this.prevScrollpos = currentScrollPos;
   }
 
   toggleTheme() {
-    const moon = document.querySelector(".moon");
-    const tdnn = document.querySelector(".tdnn");
+    const moon = this.document.querySelector(".moon");
+    const tdnn = this.document.querySelector(".tdnn");
     this.isLight = !this.isLight;
-    document.body.classList.toggle("dark");
+    this.document.body.classList.toggle("dark");
     moon?.classList.toggle('sun');
     tdnn?.classList.toggle('day');
   }

@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "dist/eurobike-website/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -109,7 +109,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "dist/eurobike-website/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json"
           },
@@ -144,7 +144,7 @@
           "builder": "@nguniversal/builders:prerender",
           "options": {
             "routes": [
-              "/"
+              "/", "radno-vreme"
             ]
           },
           "configurations": {
