@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +12,7 @@ import { WorkHoursComponent } from './components/work-hours/work-hours.component
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { NgLeafletUniversalModule } from 'ng-leaflet-universal';
+import { BrowserModule } from '@angular/platform-browser';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -28,10 +28,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     WorkHoursComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     SlickCarouselModule,
     HttpClientModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     NgLeafletUniversalModule,
     TranslateModule.forRoot({
       defaultLanguage: 'sr',
