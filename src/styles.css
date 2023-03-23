@@ -15,14 +15,9 @@
 }
 
 :root {
-	--darkbg: #130e0d;
-	--darkbgnav: #130e0dbb;
-	--darkt: #fff;
-	--darktnav: #262626;
-	--lightbg: #171C26;
-	--lightbgnav: #0e1118bb;
-	--lightty: #f7e64c;
-	--lightt: #ffffff;
+	--primarybg: #171C26;
+	--fontcolor: #fff;
+	--navbarbg: #0e1118bb;
 
 	--toggleHeight: 6em;
 	--toggleWidth: 10em;
@@ -37,13 +32,13 @@
 
 body {
 	transition: all .5s ease-in-out;
-	background: var(--lightbg);
-	color: var(--lightt);
+	background: var(--primarybg);
+	color: var(--fontcolor);
 
 	font-family: 'Dosis', sans-serif;
 }
 
 body.dark {
-	background: var(--darkbg);
-	color: var(--darkt);
+	background: var(--primarybg);
+	color: var(--fontcolor);
 }
