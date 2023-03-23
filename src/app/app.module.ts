@@ -4,19 +4,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LanguageToggleComponent } from './components/language-toggle/language-toggle.component';
 import { LeafletMapComponent } from './components/map/map.component';
 import { WorkHoursComponent } from './components/work-hours/work-hours.component';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { NgLeafletUniversalModule } from 'ng-leaflet-universal';
 import { BrowserModule } from '@angular/platform-browser';
-
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-}
+import { ServiceOfferComponent } from './components/service-offer/service-offer.component';
+import { NgOptimizedImage } from '@angular/common'
 
 @NgModule({
   declarations: [
@@ -25,7 +21,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     NavbarComponent,
     LanguageToggleComponent,
     LeafletMapComponent,
-    WorkHoursComponent
+    WorkHoursComponent,
+    ServiceOfferComponent
   ],
   imports: [
     AppRoutingModule,
@@ -33,14 +30,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HttpClientModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     NgLeafletUniversalModule,
-    TranslateModule.forRoot({
-      defaultLanguage: 'sr',
-      loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
-      }
-    })
+    NgOptimizedImage
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]

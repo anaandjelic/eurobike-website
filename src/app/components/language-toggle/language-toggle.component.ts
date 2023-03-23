@@ -1,17 +1,15 @@
-import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-import { isPlatformServer } from '@angular/common';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-language-toggle',
   templateUrl: './language-toggle.component.html',
   styleUrls: ['./language-toggle.component.css']
 })
-export class LanguageToggleComponent implements OnInit {
+export class LanguageToggleComponent {
 
   lang: string = 'sr';
   isServer = false;
-
+/*
   constructor( 
     private translateService: TranslateService,
     @Inject(PLATFORM_ID) platformID: any
@@ -42,5 +40,5 @@ export class LanguageToggleComponent implements OnInit {
       this.translateService.use(this.lang);
     }
   }
-
+*/
 }

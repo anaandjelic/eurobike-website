@@ -16,12 +16,12 @@ h3 {
 
 .image-cover {
     opacity: 70%;
-    background-color: var(--lightbg);
+    background-color: var(--primarybg);
     transition: background-color .3s ease-in-out;
 }
 
 .dark .image-cover {
-    background-color: var(--darkbg);
+    background-color: var(--primarybg);
 }
 
 button {

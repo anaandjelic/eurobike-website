@@ -10,12 +10,9 @@ li {
 }
 
 a {
-	color: var(--darkt);
+	color: var(--fontcolor);
 	text-decoration: none;
 	transition: all .3s ease-in-out;
-}
-.dark a {
-	color: var(--darkt);
 }
 
 .navbar {
@@ -25,15 +22,11 @@ a {
 	top: 0;
 	transition: all .3s ease-in-out;
 	transition: top .2s;
-	background-color: var(--lightbgnav);
+	background-color: var(--navbarbg);
 	min-height: 70px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-}
-
-.dark .navbar {
-	background-color: var(--darkbg);
 }
 
 .nav-menu {
@@ -41,7 +34,7 @@ a {
 	justify-content: space-between;
 	align-items: center;
 	gap: 30px;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 }
 
 .nav-branding {
@@ -70,10 +63,7 @@ a {
 	margin: 5px auto;
 	-webkit-transition: all .5s ease-in-out;
 	transition: all .5s ease-in-out;
-	background-color: var(--darkt);
-}
-.dark .bar {
-	background-color: var(--darkt);
+	background-color: var(--fontcolor);
 }
 
 @media(max-width: 768px) {
@@ -113,9 +103,7 @@ a {
 		opacity: 0%;
 		text-align: center;
 		transition: 0.5s ease-in-out;
-	}
-	.dark .nav-menu {
-		background-color: #ffffff00;
+		font-size: 2rem;
 	}
 
 	.nav-item {
@@ -123,10 +111,8 @@ a {
 	}
 
 	.nav-menu.active {
-		background-color: var(--lightbgnav);
+		background-color: var(--navbarbg);
 		color: rgb(255, 255, 255, 1);
 		opacity: 100%;
 	}
-	.dark .nav-menu.active {
-		background-color: var(--darkbgnav);}
 }
