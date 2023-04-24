@@ -9,5 +9,6 @@
     "api/index.js": {
       "includeFiles": "dist/eurobike-website/browser/**"
     }
-  }
+  },
+  "installCommand": "npm install --force"
 }
