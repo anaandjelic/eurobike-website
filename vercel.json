@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "public": true,
+  "name": "eurobike-website",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api" }
+  ],
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "dist/eurobike-website/browser/**"
+    }
+  }
+}
